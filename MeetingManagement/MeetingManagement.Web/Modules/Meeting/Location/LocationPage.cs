@@ -1,6 +1,5 @@
 ﻿
 
-[assembly:Serenity.Navigation.NavigationLink(int.MaxValue, "Meeting/Location", typeof(MeetingManagement.Meeting.Pages.LocationController))]
 
 namespace MeetingManagement.Meeting.Pages
 {

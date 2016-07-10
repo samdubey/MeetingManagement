@@ -1,6 +1,5 @@
 ﻿
 
-[assembly:Serenity.Navigation.NavigationLink(int.MaxValue, "Meeting/MeetingType", typeof(MeetingManagement.Meeting.Pages.MeetingTypeController))]
 
 namespace MeetingManagement.Meeting.Pages
 {
