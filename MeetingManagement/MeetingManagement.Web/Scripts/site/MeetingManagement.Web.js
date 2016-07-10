@@ -230,6 +230,236 @@ var MeetingManagement;
 })(MeetingManagement || (MeetingManagement = {}));
 var MeetingManagement;
 (function (MeetingManagement) {
+    var Meeting;
+    (function (Meeting) {
+        var UnitDialog = (function (_super) {
+            __extends(UnitDialog, _super);
+            function UnitDialog() {
+                _super.apply(this, arguments);
+                this.form = new Meeting.UnitForm(this.idPrefix);
+            }
+            UnitDialog.prototype.getFormKey = function () { return Meeting.UnitForm.formKey; };
+            UnitDialog.prototype.getIdProperty = function () { return Meeting.UnitRow.idProperty; };
+            UnitDialog.prototype.getLocalTextPrefix = function () { return Meeting.UnitRow.localTextPrefix; };
+            UnitDialog.prototype.getNameProperty = function () { return Meeting.UnitRow.nameProperty; };
+            UnitDialog.prototype.getService = function () { return Meeting.UnitService.baseUrl; };
+            UnitDialog = __decorate([
+                Serenity.Decorators.registerClass(),
+                Serenity.Decorators.responsive()
+            ], UnitDialog);
+            return UnitDialog;
+        }(Serenity.EntityDialog));
+        Meeting.UnitDialog = UnitDialog;
+    })(Meeting = MeetingManagement.Meeting || (MeetingManagement.Meeting = {}));
+})(MeetingManagement || (MeetingManagement = {}));
+var MeetingManagement;
+(function (MeetingManagement) {
+    var Meeting;
+    (function (Meeting) {
+        var UnitGrid = (function (_super) {
+            __extends(UnitGrid, _super);
+            function UnitGrid(container) {
+                _super.call(this, container);
+            }
+            UnitGrid.prototype.getColumnsKey = function () { return 'Meeting.Unit'; };
+            UnitGrid.prototype.getDialogType = function () { return Meeting.UnitDialog; };
+            UnitGrid.prototype.getIdProperty = function () { return Meeting.UnitRow.idProperty; };
+            UnitGrid.prototype.getLocalTextPrefix = function () { return Meeting.UnitRow.localTextPrefix; };
+            UnitGrid.prototype.getService = function () { return Meeting.UnitService.baseUrl; };
+            UnitGrid = __decorate([
+                Serenity.Decorators.registerClass()
+            ], UnitGrid);
+            return UnitGrid;
+        }(Serenity.EntityGrid));
+        Meeting.UnitGrid = UnitGrid;
+    })(Meeting = MeetingManagement.Meeting || (MeetingManagement.Meeting = {}));
+})(MeetingManagement || (MeetingManagement = {}));
+var MeetingManagement;
+(function (MeetingManagement) {
+    var Meeting;
+    (function (Meeting) {
+        var MeetingTypeDialog = (function (_super) {
+            __extends(MeetingTypeDialog, _super);
+            function MeetingTypeDialog() {
+                _super.apply(this, arguments);
+                this.form = new Meeting.MeetingTypeForm(this.idPrefix);
+            }
+            MeetingTypeDialog.prototype.getFormKey = function () { return Meeting.MeetingTypeForm.formKey; };
+            MeetingTypeDialog.prototype.getIdProperty = function () { return Meeting.MeetingTypeRow.idProperty; };
+            MeetingTypeDialog.prototype.getLocalTextPrefix = function () { return Meeting.MeetingTypeRow.localTextPrefix; };
+            MeetingTypeDialog.prototype.getNameProperty = function () { return Meeting.MeetingTypeRow.nameProperty; };
+            MeetingTypeDialog.prototype.getService = function () { return Meeting.MeetingTypeService.baseUrl; };
+            MeetingTypeDialog = __decorate([
+                Serenity.Decorators.registerClass(),
+                Serenity.Decorators.responsive()
+            ], MeetingTypeDialog);
+            return MeetingTypeDialog;
+        }(Serenity.EntityDialog));
+        Meeting.MeetingTypeDialog = MeetingTypeDialog;
+    })(Meeting = MeetingManagement.Meeting || (MeetingManagement.Meeting = {}));
+})(MeetingManagement || (MeetingManagement = {}));
+var MeetingManagement;
+(function (MeetingManagement) {
+    var Meeting;
+    (function (Meeting) {
+        var MeetingTypeGrid = (function (_super) {
+            __extends(MeetingTypeGrid, _super);
+            function MeetingTypeGrid(container) {
+                _super.call(this, container);
+            }
+            MeetingTypeGrid.prototype.getColumnsKey = function () { return 'Meeting.MeetingType'; };
+            MeetingTypeGrid.prototype.getDialogType = function () { return Meeting.MeetingTypeDialog; };
+            MeetingTypeGrid.prototype.getIdProperty = function () { return Meeting.MeetingTypeRow.idProperty; };
+            MeetingTypeGrid.prototype.getLocalTextPrefix = function () { return Meeting.MeetingTypeRow.localTextPrefix; };
+            MeetingTypeGrid.prototype.getService = function () { return Meeting.MeetingTypeService.baseUrl; };
+            MeetingTypeGrid = __decorate([
+                Serenity.Decorators.registerClass()
+            ], MeetingTypeGrid);
+            return MeetingTypeGrid;
+        }(Serenity.EntityGrid));
+        Meeting.MeetingTypeGrid = MeetingTypeGrid;
+    })(Meeting = MeetingManagement.Meeting || (MeetingManagement.Meeting = {}));
+})(MeetingManagement || (MeetingManagement = {}));
+var MeetingManagement;
+(function (MeetingManagement) {
+    var Meeting;
+    (function (Meeting) {
+        var LocationDialog = (function (_super) {
+            __extends(LocationDialog, _super);
+            function LocationDialog() {
+                _super.apply(this, arguments);
+                this.form = new Meeting.LocationForm(this.idPrefix);
+            }
+            LocationDialog.prototype.getFormKey = function () { return Meeting.LocationForm.formKey; };
+            LocationDialog.prototype.getIdProperty = function () { return Meeting.LocationRow.idProperty; };
+            LocationDialog.prototype.getLocalTextPrefix = function () { return Meeting.LocationRow.localTextPrefix; };
+            LocationDialog.prototype.getNameProperty = function () { return Meeting.LocationRow.nameProperty; };
+            LocationDialog.prototype.getService = function () { return Meeting.LocationService.baseUrl; };
+            LocationDialog = __decorate([
+                Serenity.Decorators.registerClass(),
+                Serenity.Decorators.responsive()
+            ], LocationDialog);
+            return LocationDialog;
+        }(Serenity.EntityDialog));
+        Meeting.LocationDialog = LocationDialog;
+    })(Meeting = MeetingManagement.Meeting || (MeetingManagement.Meeting = {}));
+})(MeetingManagement || (MeetingManagement = {}));
+var MeetingManagement;
+(function (MeetingManagement) {
+    var Meeting;
+    (function (Meeting) {
+        var LocationGrid = (function (_super) {
+            __extends(LocationGrid, _super);
+            function LocationGrid(container) {
+                _super.call(this, container);
+            }
+            LocationGrid.prototype.getColumnsKey = function () { return 'Meeting.Location'; };
+            LocationGrid.prototype.getDialogType = function () { return Meeting.LocationDialog; };
+            LocationGrid.prototype.getIdProperty = function () { return Meeting.LocationRow.idProperty; };
+            LocationGrid.prototype.getLocalTextPrefix = function () { return Meeting.LocationRow.localTextPrefix; };
+            LocationGrid.prototype.getService = function () { return Meeting.LocationService.baseUrl; };
+            LocationGrid = __decorate([
+                Serenity.Decorators.registerClass()
+            ], LocationGrid);
+            return LocationGrid;
+        }(Serenity.EntityGrid));
+        Meeting.LocationGrid = LocationGrid;
+    })(Meeting = MeetingManagement.Meeting || (MeetingManagement.Meeting = {}));
+})(MeetingManagement || (MeetingManagement = {}));
+var MeetingManagement;
+(function (MeetingManagement) {
+    var Meeting;
+    (function (Meeting) {
+        var ContactDialog = (function (_super) {
+            __extends(ContactDialog, _super);
+            function ContactDialog() {
+                _super.apply(this, arguments);
+                this.form = new Meeting.ContactForm(this.idPrefix);
+            }
+            ContactDialog.prototype.getFormKey = function () { return Meeting.ContactForm.formKey; };
+            ContactDialog.prototype.getIdProperty = function () { return Meeting.ContactRow.idProperty; };
+            ContactDialog.prototype.getLocalTextPrefix = function () { return Meeting.ContactRow.localTextPrefix; };
+            ContactDialog.prototype.getNameProperty = function () { return Meeting.ContactRow.nameProperty; };
+            ContactDialog.prototype.getService = function () { return Meeting.ContactService.baseUrl; };
+            ContactDialog = __decorate([
+                Serenity.Decorators.registerClass(),
+                Serenity.Decorators.responsive()
+            ], ContactDialog);
+            return ContactDialog;
+        }(Serenity.EntityDialog));
+        Meeting.ContactDialog = ContactDialog;
+    })(Meeting = MeetingManagement.Meeting || (MeetingManagement.Meeting = {}));
+})(MeetingManagement || (MeetingManagement = {}));
+var MeetingManagement;
+(function (MeetingManagement) {
+    var Meeting;
+    (function (Meeting) {
+        var ContactGrid = (function (_super) {
+            __extends(ContactGrid, _super);
+            function ContactGrid(container) {
+                _super.call(this, container);
+            }
+            ContactGrid.prototype.getColumnsKey = function () { return 'Meeting.Contact'; };
+            ContactGrid.prototype.getDialogType = function () { return Meeting.ContactDialog; };
+            ContactGrid.prototype.getIdProperty = function () { return Meeting.ContactRow.idProperty; };
+            ContactGrid.prototype.getLocalTextPrefix = function () { return Meeting.ContactRow.localTextPrefix; };
+            ContactGrid.prototype.getService = function () { return Meeting.ContactService.baseUrl; };
+            ContactGrid = __decorate([
+                Serenity.Decorators.registerClass()
+            ], ContactGrid);
+            return ContactGrid;
+        }(Serenity.EntityGrid));
+        Meeting.ContactGrid = ContactGrid;
+    })(Meeting = MeetingManagement.Meeting || (MeetingManagement.Meeting = {}));
+})(MeetingManagement || (MeetingManagement = {}));
+var MeetingManagement;
+(function (MeetingManagement) {
+    var Meeting;
+    (function (Meeting) {
+        var AgendaTypeDialog = (function (_super) {
+            __extends(AgendaTypeDialog, _super);
+            function AgendaTypeDialog() {
+                _super.apply(this, arguments);
+                this.form = new Meeting.AgendaTypeForm(this.idPrefix);
+            }
+            AgendaTypeDialog.prototype.getFormKey = function () { return Meeting.AgendaTypeForm.formKey; };
+            AgendaTypeDialog.prototype.getIdProperty = function () { return Meeting.AgendaTypeRow.idProperty; };
+            AgendaTypeDialog.prototype.getLocalTextPrefix = function () { return Meeting.AgendaTypeRow.localTextPrefix; };
+            AgendaTypeDialog.prototype.getNameProperty = function () { return Meeting.AgendaTypeRow.nameProperty; };
+            AgendaTypeDialog.prototype.getService = function () { return Meeting.AgendaTypeService.baseUrl; };
+            AgendaTypeDialog = __decorate([
+                Serenity.Decorators.registerClass(),
+                Serenity.Decorators.responsive()
+            ], AgendaTypeDialog);
+            return AgendaTypeDialog;
+        }(Serenity.EntityDialog));
+        Meeting.AgendaTypeDialog = AgendaTypeDialog;
+    })(Meeting = MeetingManagement.Meeting || (MeetingManagement.Meeting = {}));
+})(MeetingManagement || (MeetingManagement = {}));
+var MeetingManagement;
+(function (MeetingManagement) {
+    var Meeting;
+    (function (Meeting) {
+        var AgendaTypeGrid = (function (_super) {
+            __extends(AgendaTypeGrid, _super);
+            function AgendaTypeGrid(container) {
+                _super.call(this, container);
+            }
+            AgendaTypeGrid.prototype.getColumnsKey = function () { return 'Meeting.AgendaType'; };
+            AgendaTypeGrid.prototype.getDialogType = function () { return Meeting.AgendaTypeDialog; };
+            AgendaTypeGrid.prototype.getIdProperty = function () { return Meeting.AgendaTypeRow.idProperty; };
+            AgendaTypeGrid.prototype.getLocalTextPrefix = function () { return Meeting.AgendaTypeRow.localTextPrefix; };
+            AgendaTypeGrid.prototype.getService = function () { return Meeting.AgendaTypeService.baseUrl; };
+            AgendaTypeGrid = __decorate([
+                Serenity.Decorators.registerClass()
+            ], AgendaTypeGrid);
+            return AgendaTypeGrid;
+        }(Serenity.EntityGrid));
+        Meeting.AgendaTypeGrid = AgendaTypeGrid;
+    })(Meeting = MeetingManagement.Meeting || (MeetingManagement.Meeting = {}));
+})(MeetingManagement || (MeetingManagement = {}));
+var MeetingManagement;
+(function (MeetingManagement) {
     var ScriptInitialization;
     (function (ScriptInitialization) {
         Q.Config.responsiveDialogs = true;
@@ -881,6 +1111,251 @@ var MeetingManagement;
             });
         })(UserPreferenceService = Common.UserPreferenceService || (Common.UserPreferenceService = {}));
     })(Common = MeetingManagement.Common || (MeetingManagement.Common = {}));
+})(MeetingManagement || (MeetingManagement = {}));
+var MeetingManagement;
+(function (MeetingManagement) {
+    var Meeting;
+    (function (Meeting) {
+        var AgendaTypeForm = (function (_super) {
+            __extends(AgendaTypeForm, _super);
+            function AgendaTypeForm() {
+                _super.apply(this, arguments);
+            }
+            AgendaTypeForm.formKey = 'Meeting.AgendaType';
+            return AgendaTypeForm;
+        }(Serenity.PrefixedContext));
+        Meeting.AgendaTypeForm = AgendaTypeForm;
+        [['Name', function () { return Serenity.StringEditor; }]].forEach(function (x) { return Object.defineProperty(AgendaTypeForm.prototype, x[0], { get: function () { return this.w(x[0], x[1]()); }, enumerable: true, configurable: true }); });
+    })(Meeting = MeetingManagement.Meeting || (MeetingManagement.Meeting = {}));
+})(MeetingManagement || (MeetingManagement = {}));
+var MeetingManagement;
+(function (MeetingManagement) {
+    var Meeting;
+    (function (Meeting) {
+        var AgendaTypeRow;
+        (function (AgendaTypeRow) {
+            AgendaTypeRow.idProperty = 'AgendaTypeId';
+            AgendaTypeRow.nameProperty = 'Name';
+            AgendaTypeRow.localTextPrefix = 'Meeting.AgendaType';
+            var Fields;
+            (function (Fields) {
+            })(Fields = AgendaTypeRow.Fields || (AgendaTypeRow.Fields = {}));
+            ['AgendaTypeId', 'Name'].forEach(function (x) { return Fields[x] = x; });
+        })(AgendaTypeRow = Meeting.AgendaTypeRow || (Meeting.AgendaTypeRow = {}));
+    })(Meeting = MeetingManagement.Meeting || (MeetingManagement.Meeting = {}));
+})(MeetingManagement || (MeetingManagement = {}));
+var MeetingManagement;
+(function (MeetingManagement) {
+    var Meeting;
+    (function (Meeting) {
+        var AgendaTypeService;
+        (function (AgendaTypeService) {
+            AgendaTypeService.baseUrl = 'Meeting/AgendaType';
+            var Methods;
+            (function (Methods) {
+            })(Methods = AgendaTypeService.Methods || (AgendaTypeService.Methods = {}));
+            ['Create', 'Update', 'Delete', 'Retrieve', 'List'].forEach(function (x) {
+                AgendaTypeService[x] = function (r, s, o) { return Q.serviceRequest(AgendaTypeService.baseUrl + '/' + x, r, s, o); };
+                Methods[x] = AgendaTypeService.baseUrl + '/' + x;
+            });
+        })(AgendaTypeService = Meeting.AgendaTypeService || (Meeting.AgendaTypeService = {}));
+    })(Meeting = MeetingManagement.Meeting || (MeetingManagement.Meeting = {}));
+})(MeetingManagement || (MeetingManagement = {}));
+var MeetingManagement;
+(function (MeetingManagement) {
+    var Meeting;
+    (function (Meeting) {
+        var ContactForm = (function (_super) {
+            __extends(ContactForm, _super);
+            function ContactForm() {
+                _super.apply(this, arguments);
+            }
+            ContactForm.formKey = 'Meeting.Contact';
+            return ContactForm;
+        }(Serenity.PrefixedContext));
+        Meeting.ContactForm = ContactForm;
+        [['Title', function () { return Serenity.StringEditor; }], ['FirstName', function () { return Serenity.StringEditor; }], ['LastName', function () { return Serenity.StringEditor; }], ['Email', function () { return Serenity.StringEditor; }]].forEach(function (x) { return Object.defineProperty(ContactForm.prototype, x[0], { get: function () { return this.w(x[0], x[1]()); }, enumerable: true, configurable: true }); });
+    })(Meeting = MeetingManagement.Meeting || (MeetingManagement.Meeting = {}));
+})(MeetingManagement || (MeetingManagement = {}));
+var MeetingManagement;
+(function (MeetingManagement) {
+    var Meeting;
+    (function (Meeting) {
+        var ContactRow;
+        (function (ContactRow) {
+            ContactRow.idProperty = 'ContactId';
+            ContactRow.nameProperty = 'Title';
+            ContactRow.localTextPrefix = 'Meeting.Contact';
+            var Fields;
+            (function (Fields) {
+            })(Fields = ContactRow.Fields || (ContactRow.Fields = {}));
+            ['ContactId', 'Title', 'FirstName', 'LastName', 'Email'].forEach(function (x) { return Fields[x] = x; });
+        })(ContactRow = Meeting.ContactRow || (Meeting.ContactRow = {}));
+    })(Meeting = MeetingManagement.Meeting || (MeetingManagement.Meeting = {}));
+})(MeetingManagement || (MeetingManagement = {}));
+var MeetingManagement;
+(function (MeetingManagement) {
+    var Meeting;
+    (function (Meeting) {
+        var ContactService;
+        (function (ContactService) {
+            ContactService.baseUrl = 'Meeting/Contact';
+            var Methods;
+            (function (Methods) {
+            })(Methods = ContactService.Methods || (ContactService.Methods = {}));
+            ['Create', 'Update', 'Delete', 'Retrieve', 'List'].forEach(function (x) {
+                ContactService[x] = function (r, s, o) { return Q.serviceRequest(ContactService.baseUrl + '/' + x, r, s, o); };
+                Methods[x] = ContactService.baseUrl + '/' + x;
+            });
+        })(ContactService = Meeting.ContactService || (Meeting.ContactService = {}));
+    })(Meeting = MeetingManagement.Meeting || (MeetingManagement.Meeting = {}));
+})(MeetingManagement || (MeetingManagement = {}));
+var MeetingManagement;
+(function (MeetingManagement) {
+    var Meeting;
+    (function (Meeting) {
+        var LocationForm = (function (_super) {
+            __extends(LocationForm, _super);
+            function LocationForm() {
+                _super.apply(this, arguments);
+            }
+            LocationForm.formKey = 'Meeting.Location';
+            return LocationForm;
+        }(Serenity.PrefixedContext));
+        Meeting.LocationForm = LocationForm;
+        [['Name', function () { return Serenity.StringEditor; }], ['Address', function () { return Serenity.StringEditor; }], ['Latitude', function () { return Serenity.DecimalEditor; }], ['Longitude', function () { return Serenity.DecimalEditor; }]].forEach(function (x) { return Object.defineProperty(LocationForm.prototype, x[0], { get: function () { return this.w(x[0], x[1]()); }, enumerable: true, configurable: true }); });
+    })(Meeting = MeetingManagement.Meeting || (MeetingManagement.Meeting = {}));
+})(MeetingManagement || (MeetingManagement = {}));
+var MeetingManagement;
+(function (MeetingManagement) {
+    var Meeting;
+    (function (Meeting) {
+        var LocationRow;
+        (function (LocationRow) {
+            LocationRow.idProperty = 'LocationId';
+            LocationRow.nameProperty = 'Name';
+            LocationRow.localTextPrefix = 'Meeting.Location';
+            var Fields;
+            (function (Fields) {
+            })(Fields = LocationRow.Fields || (LocationRow.Fields = {}));
+            ['LocationId', 'Name', 'Address', 'Latitude', 'Longitude'].forEach(function (x) { return Fields[x] = x; });
+        })(LocationRow = Meeting.LocationRow || (Meeting.LocationRow = {}));
+    })(Meeting = MeetingManagement.Meeting || (MeetingManagement.Meeting = {}));
+})(MeetingManagement || (MeetingManagement = {}));
+var MeetingManagement;
+(function (MeetingManagement) {
+    var Meeting;
+    (function (Meeting) {
+        var LocationService;
+        (function (LocationService) {
+            LocationService.baseUrl = 'Meeting/Location';
+            var Methods;
+            (function (Methods) {
+            })(Methods = LocationService.Methods || (LocationService.Methods = {}));
+            ['Create', 'Update', 'Delete', 'Retrieve', 'List'].forEach(function (x) {
+                LocationService[x] = function (r, s, o) { return Q.serviceRequest(LocationService.baseUrl + '/' + x, r, s, o); };
+                Methods[x] = LocationService.baseUrl + '/' + x;
+            });
+        })(LocationService = Meeting.LocationService || (Meeting.LocationService = {}));
+    })(Meeting = MeetingManagement.Meeting || (MeetingManagement.Meeting = {}));
+})(MeetingManagement || (MeetingManagement = {}));
+var MeetingManagement;
+(function (MeetingManagement) {
+    var Meeting;
+    (function (Meeting) {
+        var MeetingTypeForm = (function (_super) {
+            __extends(MeetingTypeForm, _super);
+            function MeetingTypeForm() {
+                _super.apply(this, arguments);
+            }
+            MeetingTypeForm.formKey = 'Meeting.MeetingType';
+            return MeetingTypeForm;
+        }(Serenity.PrefixedContext));
+        Meeting.MeetingTypeForm = MeetingTypeForm;
+        [['Name', function () { return Serenity.StringEditor; }]].forEach(function (x) { return Object.defineProperty(MeetingTypeForm.prototype, x[0], { get: function () { return this.w(x[0], x[1]()); }, enumerable: true, configurable: true }); });
+    })(Meeting = MeetingManagement.Meeting || (MeetingManagement.Meeting = {}));
+})(MeetingManagement || (MeetingManagement = {}));
+var MeetingManagement;
+(function (MeetingManagement) {
+    var Meeting;
+    (function (Meeting) {
+        var MeetingTypeRow;
+        (function (MeetingTypeRow) {
+            MeetingTypeRow.idProperty = 'MeetingTypeId';
+            MeetingTypeRow.nameProperty = 'Name';
+            MeetingTypeRow.localTextPrefix = 'Meeting.MeetingType';
+            var Fields;
+            (function (Fields) {
+            })(Fields = MeetingTypeRow.Fields || (MeetingTypeRow.Fields = {}));
+            ['MeetingTypeId', 'Name'].forEach(function (x) { return Fields[x] = x; });
+        })(MeetingTypeRow = Meeting.MeetingTypeRow || (Meeting.MeetingTypeRow = {}));
+    })(Meeting = MeetingManagement.Meeting || (MeetingManagement.Meeting = {}));
+})(MeetingManagement || (MeetingManagement = {}));
+var MeetingManagement;
+(function (MeetingManagement) {
+    var Meeting;
+    (function (Meeting) {
+        var MeetingTypeService;
+        (function (MeetingTypeService) {
+            MeetingTypeService.baseUrl = 'Meeting/MeetingType';
+            var Methods;
+            (function (Methods) {
+            })(Methods = MeetingTypeService.Methods || (MeetingTypeService.Methods = {}));
+            ['Create', 'Update', 'Delete', 'Retrieve', 'List'].forEach(function (x) {
+                MeetingTypeService[x] = function (r, s, o) { return Q.serviceRequest(MeetingTypeService.baseUrl + '/' + x, r, s, o); };
+                Methods[x] = MeetingTypeService.baseUrl + '/' + x;
+            });
+        })(MeetingTypeService = Meeting.MeetingTypeService || (Meeting.MeetingTypeService = {}));
+    })(Meeting = MeetingManagement.Meeting || (MeetingManagement.Meeting = {}));
+})(MeetingManagement || (MeetingManagement = {}));
+var MeetingManagement;
+(function (MeetingManagement) {
+    var Meeting;
+    (function (Meeting) {
+        var UnitForm = (function (_super) {
+            __extends(UnitForm, _super);
+            function UnitForm() {
+                _super.apply(this, arguments);
+            }
+            UnitForm.formKey = 'Meeting.Unit';
+            return UnitForm;
+        }(Serenity.PrefixedContext));
+        Meeting.UnitForm = UnitForm;
+        [['Name', function () { return Serenity.StringEditor; }]].forEach(function (x) { return Object.defineProperty(UnitForm.prototype, x[0], { get: function () { return this.w(x[0], x[1]()); }, enumerable: true, configurable: true }); });
+    })(Meeting = MeetingManagement.Meeting || (MeetingManagement.Meeting = {}));
+})(MeetingManagement || (MeetingManagement = {}));
+var MeetingManagement;
+(function (MeetingManagement) {
+    var Meeting;
+    (function (Meeting) {
+        var UnitRow;
+        (function (UnitRow) {
+            UnitRow.idProperty = 'UnitId';
+            UnitRow.nameProperty = 'Name';
+            UnitRow.localTextPrefix = 'Meeting.Unit';
+            var Fields;
+            (function (Fields) {
+            })(Fields = UnitRow.Fields || (UnitRow.Fields = {}));
+            ['UnitId', 'Name'].forEach(function (x) { return Fields[x] = x; });
+        })(UnitRow = Meeting.UnitRow || (Meeting.UnitRow = {}));
+    })(Meeting = MeetingManagement.Meeting || (MeetingManagement.Meeting = {}));
+})(MeetingManagement || (MeetingManagement = {}));
+var MeetingManagement;
+(function (MeetingManagement) {
+    var Meeting;
+    (function (Meeting) {
+        var UnitService;
+        (function (UnitService) {
+            UnitService.baseUrl = 'Meeting/Unit';
+            var Methods;
+            (function (Methods) {
+            })(Methods = UnitService.Methods || (UnitService.Methods = {}));
+            ['Create', 'Update', 'Delete', 'Retrieve', 'List'].forEach(function (x) {
+                UnitService[x] = function (r, s, o) { return Q.serviceRequest(UnitService.baseUrl + '/' + x, r, s, o); };
+                Methods[x] = UnitService.baseUrl + '/' + x;
+            });
+        })(UnitService = Meeting.UnitService || (Meeting.UnitService = {}));
+    })(Meeting = MeetingManagement.Meeting || (MeetingManagement.Meeting = {}));
 })(MeetingManagement || (MeetingManagement = {}));
 var MeetingManagement;
 (function (MeetingManagement) {

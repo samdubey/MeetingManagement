@@ -7179,3 +7179,48 @@ section.content > .s-DataGrid {
   padding: 8px;
   margin: 24px 0;
 }
+/* ------------------------------------------------------------------------- */
+/* APPENDED BY CODE GENERATOR, MOVE TO CORRECT PLACE AND REMOVE THIS COMMENT */
+/* ------------------------------------------------------------------------- */
+.s-Meeting-AgendaTypeDialog > .size {
+  width: 650px;
+}
+.s-Meeting-AgendaTypeDialog .caption {
+  width: 150px;
+}
+/* ------------------------------------------------------------------------- */
+/* APPENDED BY CODE GENERATOR, MOVE TO CORRECT PLACE AND REMOVE THIS COMMENT */
+/* ------------------------------------------------------------------------- */
+.s-Meeting-ContactDialog > .size {
+  width: 650px;
+}
+.s-Meeting-ContactDialog .caption {
+  width: 150px;
+}
+/* ------------------------------------------------------------------------- */
+/* APPENDED BY CODE GENERATOR, MOVE TO CORRECT PLACE AND REMOVE THIS COMMENT */
+/* ------------------------------------------------------------------------- */
+.s-Meeting-LocationDialog > .size {
+  width: 650px;
+}
+.s-Meeting-LocationDialog .caption {
+  width: 150px;
+}
+/* ------------------------------------------------------------------------- */
+/* APPENDED BY CODE GENERATOR, MOVE TO CORRECT PLACE AND REMOVE THIS COMMENT */
+/* ------------------------------------------------------------------------- */
+.s-Meeting-MeetingTypeDialog > .size {
+  width: 650px;
+}
+.s-Meeting-MeetingTypeDialog .caption {
+  width: 150px;
+}
+/* ------------------------------------------------------------------------- */
+/* APPENDED BY CODE GENERATOR, MOVE TO CORRECT PLACE AND REMOVE THIS COMMENT */
+/* ------------------------------------------------------------------------- */
+.s-Meeting-UnitDialog > .size {
+  width: 650px;
+}
+.s-Meeting-UnitDialog .caption {
+  width: 150px;
+}

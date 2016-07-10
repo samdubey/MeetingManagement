@@ -33,6 +33,106 @@ declare namespace MeetingManagement.Membership {
         constructor(container: JQuery);
     }
 }
+declare namespace MeetingManagement.Meeting {
+    class UnitDialog extends Serenity.EntityDialog<UnitRow, any> {
+        protected getFormKey(): string;
+        protected getIdProperty(): string;
+        protected getLocalTextPrefix(): string;
+        protected getNameProperty(): string;
+        protected getService(): string;
+        protected form: UnitForm;
+    }
+}
+declare namespace MeetingManagement.Meeting {
+    class UnitGrid extends Serenity.EntityGrid<UnitRow, any> {
+        protected getColumnsKey(): string;
+        protected getDialogType(): typeof UnitDialog;
+        protected getIdProperty(): string;
+        protected getLocalTextPrefix(): string;
+        protected getService(): string;
+        constructor(container: JQuery);
+    }
+}
+declare namespace MeetingManagement.Meeting {
+    class MeetingTypeDialog extends Serenity.EntityDialog<MeetingTypeRow, any> {
+        protected getFormKey(): string;
+        protected getIdProperty(): string;
+        protected getLocalTextPrefix(): string;
+        protected getNameProperty(): string;
+        protected getService(): string;
+        protected form: MeetingTypeForm;
+    }
+}
+declare namespace MeetingManagement.Meeting {
+    class MeetingTypeGrid extends Serenity.EntityGrid<MeetingTypeRow, any> {
+        protected getColumnsKey(): string;
+        protected getDialogType(): typeof MeetingTypeDialog;
+        protected getIdProperty(): string;
+        protected getLocalTextPrefix(): string;
+        protected getService(): string;
+        constructor(container: JQuery);
+    }
+}
+declare namespace MeetingManagement.Meeting {
+    class LocationDialog extends Serenity.EntityDialog<LocationRow, any> {
+        protected getFormKey(): string;
+        protected getIdProperty(): string;
+        protected getLocalTextPrefix(): string;
+        protected getNameProperty(): string;
+        protected getService(): string;
+        protected form: LocationForm;
+    }
+}
+declare namespace MeetingManagement.Meeting {
+    class LocationGrid extends Serenity.EntityGrid<LocationRow, any> {
+        protected getColumnsKey(): string;
+        protected getDialogType(): typeof LocationDialog;
+        protected getIdProperty(): string;
+        protected getLocalTextPrefix(): string;
+        protected getService(): string;
+        constructor(container: JQuery);
+    }
+}
+declare namespace MeetingManagement.Meeting {
+    class ContactDialog extends Serenity.EntityDialog<ContactRow, any> {
+        protected getFormKey(): string;
+        protected getIdProperty(): string;
+        protected getLocalTextPrefix(): string;
+        protected getNameProperty(): string;
+        protected getService(): string;
+        protected form: ContactForm;
+    }
+}
+declare namespace MeetingManagement.Meeting {
+    class ContactGrid extends Serenity.EntityGrid<ContactRow, any> {
+        protected getColumnsKey(): string;
+        protected getDialogType(): typeof ContactDialog;
+        protected getIdProperty(): string;
+        protected getLocalTextPrefix(): string;
+        protected getService(): string;
+        constructor(container: JQuery);
+    }
+}
+declare namespace MeetingManagement.Meeting {
+    class AgendaTypeDialog extends Serenity.EntityDialog<AgendaTypeRow, any> {
+        protected getFormKey(): string;
+        protected getIdProperty(): string;
+        protected getLocalTextPrefix(): string;
+        protected getNameProperty(): string;
+        protected getService(): string;
+        protected form: AgendaTypeForm;
+    }
+}
+declare namespace MeetingManagement.Meeting {
+    class AgendaTypeGrid extends Serenity.EntityGrid<AgendaTypeRow, any> {
+        protected getColumnsKey(): string;
+        protected getDialogType(): typeof AgendaTypeDialog;
+        protected getIdProperty(): string;
+        protected getLocalTextPrefix(): string;
+        protected getService(): string;
+        constructor(container: JQuery);
+    }
+}
 declare namespace MeetingManagement.ScriptInitialization {
 }
 declare namespace MeetingManagement.Common {
@@ -486,6 +586,224 @@ declare namespace MeetingManagement.Common {
         PreferenceType?: string;
         Name?: string;
         Value?: string;
+    }
+}
+declare namespace MeetingManagement.Meeting {
+    class AgendaTypeForm extends Serenity.PrefixedContext {
+        static formKey: string;
+    }
+    interface AgendaTypeForm {
+        Name: Serenity.StringEditor;
+    }
+}
+declare namespace MeetingManagement.Meeting {
+    interface AgendaTypeRow {
+        AgendaTypeId?: number;
+        Name?: string;
+    }
+    namespace AgendaTypeRow {
+        const idProperty: string;
+        const nameProperty: string;
+        const localTextPrefix: string;
+        namespace Fields {
+            const AgendaTypeId: any;
+            const Name: any;
+        }
+    }
+}
+declare namespace MeetingManagement.Meeting {
+    namespace AgendaTypeService {
+        const baseUrl: string;
+        function Create(request: Serenity.SaveRequest<AgendaTypeRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Serenity.ServiceOptions<any>): JQueryXHR;
+        function Update(request: Serenity.SaveRequest<AgendaTypeRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Serenity.ServiceOptions<any>): JQueryXHR;
+        function Delete(request: Serenity.DeleteRequest, onSuccess?: (response: Serenity.DeleteResponse) => void, opt?: Serenity.ServiceOptions<any>): JQueryXHR;
+        function Retrieve(request: Serenity.RetrieveRequest, onSuccess?: (response: Serenity.RetrieveResponse<AgendaTypeRow>) => void, opt?: Serenity.ServiceOptions<any>): JQueryXHR;
+        function List(request: Serenity.ListRequest, onSuccess?: (response: Serenity.ListResponse<AgendaTypeRow>) => void, opt?: Serenity.ServiceOptions<any>): JQueryXHR;
+        namespace Methods {
+            const Create: string;
+            const Update: string;
+            const Delete: string;
+            const Retrieve: string;
+            const List: string;
+        }
+    }
+}
+declare namespace MeetingManagement.Meeting {
+    class ContactForm extends Serenity.PrefixedContext {
+        static formKey: string;
+    }
+    interface ContactForm {
+        Title: Serenity.StringEditor;
+        FirstName: Serenity.StringEditor;
+        LastName: Serenity.StringEditor;
+        Email: Serenity.StringEditor;
+    }
+}
+declare namespace MeetingManagement.Meeting {
+    interface ContactRow {
+        ContactId?: number;
+        Title?: string;
+        FirstName?: string;
+        LastName?: string;
+        Email?: string;
+    }
+    namespace ContactRow {
+        const idProperty: string;
+        const nameProperty: string;
+        const localTextPrefix: string;
+        namespace Fields {
+            const ContactId: any;
+            const Title: any;
+            const FirstName: any;
+            const LastName: any;
+            const Email: any;
+        }
+    }
+}
+declare namespace MeetingManagement.Meeting {
+    namespace ContactService {
+        const baseUrl: string;
+        function Create(request: Serenity.SaveRequest<ContactRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Serenity.ServiceOptions<any>): JQueryXHR;
+        function Update(request: Serenity.SaveRequest<ContactRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Serenity.ServiceOptions<any>): JQueryXHR;
+        function Delete(request: Serenity.DeleteRequest, onSuccess?: (response: Serenity.DeleteResponse) => void, opt?: Serenity.ServiceOptions<any>): JQueryXHR;
+        function Retrieve(request: Serenity.RetrieveRequest, onSuccess?: (response: Serenity.RetrieveResponse<ContactRow>) => void, opt?: Serenity.ServiceOptions<any>): JQueryXHR;
+        function List(request: Serenity.ListRequest, onSuccess?: (response: Serenity.ListResponse<ContactRow>) => void, opt?: Serenity.ServiceOptions<any>): JQueryXHR;
+        namespace Methods {
+            const Create: string;
+            const Update: string;
+            const Delete: string;
+            const Retrieve: string;
+            const List: string;
+        }
+    }
+}
+declare namespace MeetingManagement.Meeting {
+    class LocationForm extends Serenity.PrefixedContext {
+        static formKey: string;
+    }
+    interface LocationForm {
+        Name: Serenity.StringEditor;
+        Address: Serenity.StringEditor;
+        Latitude: Serenity.DecimalEditor;
+        Longitude: Serenity.DecimalEditor;
+    }
+}
+declare namespace MeetingManagement.Meeting {
+    interface LocationRow {
+        LocationId?: number;
+        Name?: string;
+        Address?: string;
+        Latitude?: number;
+        Longitude?: number;
+    }
+    namespace LocationRow {
+        const idProperty: string;
+        const nameProperty: string;
+        const localTextPrefix: string;
+        namespace Fields {
+            const LocationId: any;
+            const Name: any;
+            const Address: any;
+            const Latitude: any;
+            const Longitude: any;
+        }
+    }
+}
+declare namespace MeetingManagement.Meeting {
+    namespace LocationService {
+        const baseUrl: string;
+        function Create(request: Serenity.SaveRequest<LocationRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Serenity.ServiceOptions<any>): JQueryXHR;
+        function Update(request: Serenity.SaveRequest<LocationRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Serenity.ServiceOptions<any>): JQueryXHR;
+        function Delete(request: Serenity.DeleteRequest, onSuccess?: (response: Serenity.DeleteResponse) => void, opt?: Serenity.ServiceOptions<any>): JQueryXHR;
+        function Retrieve(request: Serenity.RetrieveRequest, onSuccess?: (response: Serenity.RetrieveResponse<LocationRow>) => void, opt?: Serenity.ServiceOptions<any>): JQueryXHR;
+        function List(request: Serenity.ListRequest, onSuccess?: (response: Serenity.ListResponse<LocationRow>) => void, opt?: Serenity.ServiceOptions<any>): JQueryXHR;
+        namespace Methods {
+            const Create: string;
+            const Update: string;
+            const Delete: string;
+            const Retrieve: string;
+            const List: string;
+        }
+    }
+}
+declare namespace MeetingManagement.Meeting {
+    class MeetingTypeForm extends Serenity.PrefixedContext {
+        static formKey: string;
+    }
+    interface MeetingTypeForm {
+        Name: Serenity.StringEditor;
+    }
+}
+declare namespace MeetingManagement.Meeting {
+    interface MeetingTypeRow {
+        MeetingTypeId?: number;
+        Name?: string;
+    }
+    namespace MeetingTypeRow {
+        const idProperty: string;
+        const nameProperty: string;
+        const localTextPrefix: string;
+        namespace Fields {
+            const MeetingTypeId: any;
+            const Name: any;
+        }
+    }
+}
+declare namespace MeetingManagement.Meeting {
+    namespace MeetingTypeService {
+        const baseUrl: string;
+        function Create(request: Serenity.SaveRequest<MeetingTypeRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Serenity.ServiceOptions<any>): JQueryXHR;
+        function Update(request: Serenity.SaveRequest<MeetingTypeRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Serenity.ServiceOptions<any>): JQueryXHR;
+        function Delete(request: Serenity.DeleteRequest, onSuccess?: (response: Serenity.DeleteResponse) => void, opt?: Serenity.ServiceOptions<any>): JQueryXHR;
+        function Retrieve(request: Serenity.RetrieveRequest, onSuccess?: (response: Serenity.RetrieveResponse<MeetingTypeRow>) => void, opt?: Serenity.ServiceOptions<any>): JQueryXHR;
+        function List(request: Serenity.ListRequest, onSuccess?: (response: Serenity.ListResponse<MeetingTypeRow>) => void, opt?: Serenity.ServiceOptions<any>): JQueryXHR;
+        namespace Methods {
+            const Create: string;
+            const Update: string;
+            const Delete: string;
+            const Retrieve: string;
+            const List: string;
+        }
+    }
+}
+declare namespace MeetingManagement.Meeting {
+    class UnitForm extends Serenity.PrefixedContext {
+        static formKey: string;
+    }
+    interface UnitForm {
+        Name: Serenity.StringEditor;
+    }
+}
+declare namespace MeetingManagement.Meeting {
+    interface UnitRow {
+        UnitId?: number;
+        Name?: string;
+    }
+    namespace UnitRow {
+        const idProperty: string;
+        const nameProperty: string;
+        const localTextPrefix: string;
+        namespace Fields {
+            const UnitId: any;
+            const Name: any;
+        }
+    }
+}
+declare namespace MeetingManagement.Meeting {
+    namespace UnitService {
+        const baseUrl: string;
+        function Create(request: Serenity.SaveRequest<UnitRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Serenity.ServiceOptions<any>): JQueryXHR;
+        function Update(request: Serenity.SaveRequest<UnitRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Serenity.ServiceOptions<any>): JQueryXHR;
+        function Delete(request: Serenity.DeleteRequest, onSuccess?: (response: Serenity.DeleteResponse) => void, opt?: Serenity.ServiceOptions<any>): JQueryXHR;
+        function Retrieve(request: Serenity.RetrieveRequest, onSuccess?: (response: Serenity.RetrieveResponse<UnitRow>) => void, opt?: Serenity.ServiceOptions<any>): JQueryXHR;
+        function List(request: Serenity.ListRequest, onSuccess?: (response: Serenity.ListResponse<UnitRow>) => void, opt?: Serenity.ServiceOptions<any>): JQueryXHR;
+        namespace Methods {
+            const Create: string;
+            const Update: string;
+            const Delete: string;
+            const Retrieve: string;
+            const List: string;
+        }
     }
 }
 declare namespace MeetingManagement.Membership {
