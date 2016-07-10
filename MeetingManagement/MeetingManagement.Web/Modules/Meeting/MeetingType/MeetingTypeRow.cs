@@ -11,7 +11,7 @@ namespace MeetingManagement.Meeting.Entities
     using System.ComponentModel;
     using System.IO;
 
-    [ConnectionKey("Default"), DisplayName("MeetingTypes"), InstanceName("MeetingTypes"), TwoLevelCached]
+    [ConnectionKey("Default"), DisplayName("Meeting Types"), InstanceName("Meeting Type"), TwoLevelCached]
     [ReadPermission("")]
     [ModifyPermission("")]
     public sealed class MeetingTypeRow : Row, IIdRow, INameRow

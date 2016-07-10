@@ -11,7 +11,7 @@ namespace MeetingManagement.Meeting.Entities
     using System.ComponentModel;
     using System.IO;
 
-    [ConnectionKey("Default"), DisplayName("AgendaTypes"), InstanceName("AgendaTypes"), TwoLevelCached]
+    [ConnectionKey("Default"), DisplayName("Agenda Types"), InstanceName("Agenda Type"), TwoLevelCached]
     [ReadPermission("Meeting")]
     [ModifyPermission("Meeting")]
     public sealed class AgendaTypeRow : Row, IIdRow, INameRow

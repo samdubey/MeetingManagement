@@ -11,7 +11,7 @@ namespace MeetingManagement.Meeting.Entities
     using System.ComponentModel;
     using System.IO;
 
-    [ConnectionKey("Default"), DisplayName("Contacts"), InstanceName("Contacts"), TwoLevelCached]
+    [ConnectionKey("Default"), DisplayName("Contacts"), InstanceName("Contact"), TwoLevelCached]
     [ReadPermission("")]
     [ModifyPermission("")]
     public sealed class ContactRow : Row, IIdRow, INameRow

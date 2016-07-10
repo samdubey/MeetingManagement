@@ -11,7 +11,7 @@ namespace MeetingManagement.Meeting.Entities
     using System.ComponentModel;
     using System.IO;
 
-    [ConnectionKey("Default"), DisplayName("Locations"), InstanceName("Locations"), TwoLevelCached]
+    [ConnectionKey("Default"), DisplayName("Locations"), InstanceName("Location"), TwoLevelCached]
     [ReadPermission("")]
     [ModifyPermission("")]
     public sealed class LocationRow : Row, IIdRow, INameRow
